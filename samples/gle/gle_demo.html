@@ -1,0 +1,407 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Interspeech'19 Audio Samples</title></head>
+<style>
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.title {
+	background-color: rgb(80,0,0);
+	width: 100%;
+	text-align: center
+}
+
+.title td{
+	padding: 5px;
+}
+
+.title .logo{
+	width: 220px;
+}
+
+.title h1{
+	font-size: 18pt;
+	font-family: avant garde, verdana, helvetica, sans-serif;
+	color: white;
+	line-height: 1.15;
+}
+
+.title h2{
+	font-size: 12pt;
+	font-family: georgia, times new roman, serif;
+	font-style: italic;
+	color: white;
+	line-height: 1.15;
+}
+
+main{
+	font-family: serif;
+	font-size: 18px;
+	padding: 0 10px 0 10px;
+}
+
+main h1{
+	font-family: sans-serif;
+	font-size: 24px;
+}
+
+main table.samples{
+	text-align: center;
+}
+
+main table.samples th{
+	border-bottom: 2px solid #333;
+	width: 14%;
+	height: 60px;
+}
+
+main table.samples td{
+	border-right: 1px #333 solid;
+	border-bottom: 1px #666 solid;
+	width: 14%;
+	height: 60px;
+}
+
+.mtf { 
+	background-color: rgb(225, 225, 255);
+}
+
+.ftm{
+	background-color: rgb(255, 225, 225);
+}
+
+.source{
+	background-color: rgb(225, 255, 225);
+}
+</style>
+<body>
+<table class="title">
+<tbody>
+<tr>
+<td>
+<h1>Group Latent Embedding for Vector Quantized Variational Autoencoder in Non-Parallel Voice Conversion</h1>
+<h2>Shaojin Ding, Ricardo Gutierrez-Osuna</h2>
+<h2>Department of Computer Science and Engineering, Texas A&M University, USA</h2>
+</td>
+</tbody>
+</table>
+<main>
+
+<h1>Voice Conversion Audio Samples</h1>
+
+<p>Dataset: CSTR VCTK dataset <a href="https://homepages.inf.ed.ac.uk/jyamagis/page3/page58/page58.html">[1]</a><p>
+<p>Note: the parallel samples shown here are just for easier comparison. In training, we did not require parallel corpus and we did not use parallel corpus.
+<hr>
+Systems:
+
+<ul>
+<li><b>GLE (Proposed)</b>: Use Group Latent Embedding in Vector Quantized Variational Autoencoder for voice conversion.</li>
+<li><b>VQVAE [2]</b>: Conventional Vector Quantized Variational Autoencoder for voice conversion.</li>
+<li><b>PPG-GMM [3]</b>: Use posteriorgram to pair source and target frames, and then use joint Gaussian Mixture Models for voice conversion.</li>
+</ul>
+<hr>
+
+<h2>Male &rarr; Male</h2>
+
+<table width="100%" class="samples">
+<tbody>
+	<tr>
+		<th></th>
+		<th>Source</th>
+		<th>Target</th>
+		<th>GLE (Proposed)</th>
+		<th>VQ-VAE</th>
+		<th>PPG-GMM</th>
+	</tr>
+	<tr>
+		<td>Sample 1</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/mm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/mm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/mm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/mm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/mm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Sample 2</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/mm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/mm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/mm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/mm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/mm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>Male &rarr; Female</h2>
+
+<table width="100%" class="samples">
+<tbody>
+	<tr>
+		<th></th>
+		<th>Source</th>
+		<th>Target</th>
+		<th>GLE (Proposed)</th>
+		<th>VQ-VAE</th>
+		<th>PPG-GMM</th>
+	</tr>
+	<tr>
+		<td>Sample 1</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/mf/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/mf/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/mf/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/mf/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/mf/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Sample 2</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/mf/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/mf/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/mf/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/mf/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/mf/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>Female &rarr; Female</h2>
+
+<table width="100%" class="samples">
+<tbody>
+	<tr>
+		<th></th>
+		<th>Source</th>
+		<th>Target</th>
+		<th>GLE (Proposed)</th>
+		<th>VQ-VAE</th>
+		<th>PPG-GMM</th>
+	</tr>
+	<tr>
+		<td>Sample 1</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/ff/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/ff/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/ff/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/ff/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/ff/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Sample 2</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/ff/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/ff/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/ff/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/ff/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/ff/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>Female &rarr; Male</h2>
+
+<table width="100%" class="samples">
+<tbody>
+	<tr>
+		<th></th>
+		<th>Source</th>
+		<th>Target</th>
+		<th>GLE (Proposed)</th>
+		<th>VQ-VAE</th>
+		<th>PPG-GMM</th>
+	</tr>
+	<tr>
+		<td>Sample 1</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/fm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/fm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/fm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/fm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/fm/sample_01.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Sample 2</ >
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="src/fm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="tgt/fm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="gle/fm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="vqvae/fm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+		<td>
+			<audio controls="" style="width: 250px;">
+				<source src="ppg_gmm/fm/sample_02.wav" type="audio/wav">Your browser does not support the audio tag.</source>
+			</audio>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<hr>
+<h1>References</h1>
+<p>[1] Veaux, Christophe, Junichi Yamagishi, and Kirsten MacDonald. "CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit." (2017). </p> 
+<p>[2] van den Oord, Aaron, and Oriol Vinyals. "Neural discrete representation learning." Advances in Neural Information Processing Systems. 2017. <a href="https://papers.nips.cc/paper/7210-neural-discrete-representation-learning.pdf">[PDF]</a></p> 
+<p>[3] Zhao, Guanlong, et al. "Accent conversion using phonetic posteriorgrams." 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8462258">[PDF]</a></p> 
+</main>
+</body></html>
